@@ -1,0 +1,13 @@
+.features {
+  display: none;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.features-list__items {
+  flex-basis: calc(100%);
+}

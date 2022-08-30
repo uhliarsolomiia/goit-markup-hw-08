@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  background-color: $background-site;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  margin: 0;
+}
+
+header {
+  background-color: $background-site;
+  border-bottom: 1px solid #ececee;
+  margin: auto;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+input {
+  color: $title-color;
+}
+footer {
+  background-color: $background-hero;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  margin: auto;
+}
+address {
+  margin-top: 20px;
+}

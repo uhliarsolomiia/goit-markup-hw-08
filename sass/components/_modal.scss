@@ -1,0 +1,51 @@
+.modal {
+  padding: 40px;
+  background-color: $background-site;
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 538px;
+    width: 100%;
+  }
+}
+
+.modal__btn {
+  margin-left: auto;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background: $background-site;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  @extend %aling-list;
+  justify-content: center;
+  &:hover,
+  &:focus {
+    fill: $accent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.modal__icon {
+  width: 11px;
+  height: 11px;
+}
+
+.modal__text {
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 12px;
+  margin-top: 0;
+
+  color: $text-color;
+}

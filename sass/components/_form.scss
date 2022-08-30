@@ -1,0 +1,149 @@
+.form-group {
+  position: relative;
+  flex-direction: column;
+  @extend %aling-list;
+  justify-content: center;
+}
+
+.form-group__icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+
+  transform: translateY(-50%);
+  .form-group__input:focus + & {
+    fill: $accent;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.form-group__input {
+  width: 370px;
+  height: 40px;
+  padding-left: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  outline: none;
+  &:focus {
+    border: 1px solid $accent;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.form-group__label {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
+  color: $title-color;
+  text-align: start;
+}
+
+.form-area {
+  flex-direction: column;
+  margin: 0;
+  text-align: start;
+}
+
+.form-area__text {
+  width: 370px;
+  height: 120px;
+  margin: 0;
+  padding-left: 16px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  height: 120px;
+  resize: none;
+  outline: none;
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  &:focus {
+    border-color: $accent;
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.form-area__label {
+  font-size: 12px;
+  line-height: 1.16;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: $title-color;
+}
+
+.form-check__btn {
+  display: inline-block;
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  padding: 0;
+
+  background: $accent;
+  border: $adress-color;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.87;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  color: $background-site;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-check_label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.71;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: $title-color;
+  margin-top: 20px;
+}
+
+.checkbox {
+  @extend %aling-list;
+  justify-content: center;
+  border: 2px solid $primary-title-color;
+  border-radius: 4px;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  .form-check_input:focus + .form-check_label & {
+    border-color: $accent;
+  }
+  .form-check_input:checked + .form-check_label & {
+    background-color: $accent;
+    border: none;
+  }
+}
+
+.form-check__link {
+  color: $accent;
+  margin-left: 3px;
+}
+
+.checkbox__icon {
+  fill: transparent;
+  width: 11px;
+  height: 18px;
+}
+
+.checkbox__icon {
+  fill: $background-site;
+}

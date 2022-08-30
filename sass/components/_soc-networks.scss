@@ -1,0 +1,36 @@
+.soc-networks {
+  padding: 0;
+  margin-top: 16px;
+  @extend %aling-list;
+
+  justify-content: center;
+  gap: 10px;
+}
+
+.soc-networks__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  @extend %aling-list;
+  background-color: $background-site;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $accent;
+  }
+}
+
+.soc-networks__icon {
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .soc-networks__link:hover &,
+  .soc-networks__link:focus & {
+    fill: $background-site;
+  }
+}
+
+.soc-networks__link_color_white {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
