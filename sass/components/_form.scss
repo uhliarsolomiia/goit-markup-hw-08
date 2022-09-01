@@ -1,7 +1,8 @@
 .form-group {
   position: relative;
   flex-direction: column;
-  @extend %aling-list;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -20,20 +21,30 @@
 }
 
 .form-group__input {
-  width: 370px;
-  height: 40px;
-  padding-left: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-
   outline: none;
   &:focus {
     border: 1px solid $accent;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  @media screen and (max-width: 479px) {
+    width: 100%;
+    height: 40px;
+  }
+  @media screen and (min-width: 480px) {
+    width: 370px;
+    height: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+    height: 40px;
+  }
 }
 
 .form-group__label {
+  width: 100%;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -49,8 +60,6 @@
 }
 
 .form-area__text {
-  width: 370px;
-  height: 120px;
   margin: 0;
   padding-left: 16px;
   padding-top: 12px;
@@ -58,7 +67,7 @@
   padding-bottom: 12px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  height: 120px;
+
   resize: none;
   outline: none;
   color: rgba(117, 117, 117, 0.5);
@@ -71,6 +80,17 @@
   }
   &::placeholder {
     color: rgba(117, 117, 117, 0.5);
+  }
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 480px) {
+    width: 370px;
+    height: 120px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+    height: 120px;
   }
 }
 
@@ -88,7 +108,6 @@
   width: 200px;
   height: 50px;
   padding: 0;
-
   background: $accent;
   border: $adress-color;
   border-radius: 4px;
@@ -97,21 +116,39 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-align: center;
-
   color: $background-site;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @media screen and (max-width: 479px) {
+    min-width: 200px;
+  }
 }
 
-.form-check_label {
-  display: flex;
-  align-items: center;
+.form-check__label {
+  @extend %aling-list;
   justify-content: center;
-  font-size: 14px;
-  line-height: 1.71;
   font-weight: 400;
   letter-spacing: 0.03em;
   color: $title-color;
   margin-top: 20px;
+
+  @media screen and (max-width: 479px) {
+    font-size: 6px;
+    line-height: 1;
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.form-check__input {
+  @media screen and (min-width: 1199px) {
+    width: 370px;
+  }
 }
 
 .checkbox {

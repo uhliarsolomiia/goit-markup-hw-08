@@ -23,7 +23,7 @@
    <header>
         <div class="header-content__nav container ">
           <a class="logo" href="">Web<span class="logo__text logo__text--inverse">Studio</span></a>
-          <button type="button" class="menu-open " >
+          <button type="button" class="menu-open" menu-open >
             <svg class="icon-menu" width="40" height="40" aria-label="Перемикач мобільного меню">
               <use href="./images/icons/mobile.svg#icon-menu_mobile"></use>
             </svg>
@@ -31,7 +31,7 @@
           <div class="mobmenu">
           <div class="container">
           <div class="navigator ">
-          <button class="menu-close">
+          <button type="button" class="menu-close" menu-close>
           <svg class="menu-close__icon" width="40" height="40" aria-label="Перемикач мобільного меню">
               <use href="./images/icons/mobile.svg#icon-close_mobile"></use>
               </svg>
@@ -472,7 +472,7 @@
           </button>
           <p class="modal__text">Залиште свої дані, ми вам передзвонимо</p>
 
-          <form>
+          <form class="form">
             <div class="form-group">
               <label for="name" class="form-group__label"
                 >Імя
@@ -520,9 +520,9 @@
                 type="checkbox"
                 name="policy"
                 id="policy"
-                class="form-check_input visually-hidden"
+                class="form-check__input visually-hidden"
               />
-              <label for="policy" class="form-check_label">
+              <label for="policy" class="form-check__label">
                 <span class="checkbox">
                   <svg class="checkbox__icon">
                     <use href="./images/icons/icon-forms.svg#icon-Vector-8"></use>
@@ -538,7 +538,7 @@
       </div>
 
       <script src="./js/modal.js"></script>
-      <script scr="./js.menu.js"></script>
+      <script scr="./js/menu.js"></script>
     </footer>
   </body>
 </html>

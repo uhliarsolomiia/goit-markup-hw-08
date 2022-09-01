@@ -30,7 +30,9 @@
     }
   }
 }
-
+.mobmenu > .container > .menu {
+  gap: 32px;
+}
 .header-content__nav {
   display: flex;
   align-items: center;
@@ -97,17 +99,11 @@
     font-size: 14px;
     line-height: 1.14;
     gap: 50px;
-    margin-left: 87px;
     display: flex;
-    height: 100%;
   }
   @media screen and (min-width: 1200px) {
     margin-left: 92px;
   }
-}
-
-.menu__item:not(:last-child) {
-  margin-bottom: 32px;
 }
 
 .menu__link {
@@ -153,16 +149,11 @@
   color: $accent;
 }
 
-.contacts-header {
-  padding: 0;
-}
-
 .contacts {
+  gap: 30px;
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
-  @media screen and (max-width: 767px) {
-  }
+  padding: 0;
 
   @media screen and (max-width: 1199px) {
     display: inline-block;
@@ -175,11 +166,10 @@
 }
 
 .contacts__item {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 32px;
-  }
-  &:not(:last-child) {
-    margin-bottom: 10px;
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 }
 

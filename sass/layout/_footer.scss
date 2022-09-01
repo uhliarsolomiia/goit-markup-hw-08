@@ -5,9 +5,20 @@
   }
 }
 
+.page-footer__info {
+  @media screen and (min-width: 786px) {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
 .address-data {
-  display: inline;
-  width: 231px;
+  @media screen and (max-width: 1199px) {
+    flex-basis: 50%;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .address-list {
@@ -16,9 +27,13 @@
   margin-bottom: 0;
   font-style: normal;
 }
+
 .address-list__item {
-  margin-bottom: 9px;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
+
 .address-list__link {
   font-weight: 400;
   font-size: 14px;
@@ -44,6 +59,14 @@
 }
 
 .join {
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    flex-basis: 50%;
+  }
+
   @media screen and (min-width: 1200px) {
     margin-left: 70px;
   }
@@ -66,7 +89,6 @@
   color: $background-site;
 
   margin-bottom: 20px;
-  margin-top: 0;
   @media screen and (min-width: 1200px) {
     display: flex;
   }
@@ -76,11 +98,15 @@
   width: 570px;
 }
 .mailing-form {
-  margin-right: 0;
-  display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   @media screen and (min-width: 1200px) {
-    margin-left: 93px;
+    margin-left: auto;
   }
 }
 
@@ -102,7 +128,12 @@
   @media screen and (min-width: 1200px) {
     width: 358px;
   }
+  @media screen and (max-width: 1199px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
+
 .mailing-form__label {
   margin-bottom: 20px;
   font-size: 14px;
@@ -116,9 +147,9 @@
     display: flex;
   }
 }
+
 .mailing-form__btn {
   width: 200px;
-  margin: auto;
   margin-left: 12px;
   border-radius: 4px;
   background: $accent;
@@ -137,6 +168,10 @@
   @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
