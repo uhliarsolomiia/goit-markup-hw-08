@@ -1,13 +1,17 @@
 .features {
-  display: none;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .features__list {
   margin: 0;
   padding: 0;
+  display: flex;
   gap: 30px;
 }
 
 .features-list__items {
-  flex-basis: calc(100%);
+  width: 370px;
+  flex-basis: calc(100% / 3);
 }

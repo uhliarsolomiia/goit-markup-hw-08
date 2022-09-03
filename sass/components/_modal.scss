@@ -21,6 +21,7 @@
     height: 581px;
   }
 }
+
 .modal__btn {
   position: absolute;
   top: 8px;
@@ -38,6 +39,7 @@
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+
 .modal__icon {
   width: 11px;
   height: 11px;
@@ -48,9 +50,7 @@
   line-height: 1.15;
   font-weight: 700;
   letter-spacing: 0.03em;
-  text-align: center;
-  margin-bottom: 12px;
   margin-top: 0;
 
-  color: $text-color;
+  color: $title-color;
 }

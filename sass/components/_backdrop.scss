@@ -8,10 +8,6 @@
   transition-property: opacity 500ms;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  @media screen and (max-width: 479px) {
-    padding: 93px 15px;
-  }
-  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
