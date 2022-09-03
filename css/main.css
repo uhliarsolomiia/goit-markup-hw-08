@@ -404,10 +404,10 @@ address {
   height: 15px;
   margin-right: 8px;
 }
-.form-check_input:focus + .form-check_label .checkbox {
+.form-check__input:focus + .form-check__label .checkbox {
   border-color: #2196f3;
 }
-.form-check_input:checked + .form-check_label .checkbox {
+.form-check__input:checked + .form-check__label .checkbox {
   background-color: #2196f3;
   border: none;
 }
@@ -424,7 +424,7 @@ address {
 }
 
 .checkbox__icon {
-  fill: black;
+  fill: #ffffff;
 }
 
 .actions {
@@ -527,8 +527,11 @@ address {
 }
 
 .card-set__link {
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
 }
 .card-set__link:hover, .card-set__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -539,11 +542,16 @@ address {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 0;
 }
 
 .card-set__item {
-  width: 100%;
   margin-top: 30px;
+}
+@media screen and (max-width: 767px) {
+  .card-set__item {
+    flex-basis: 100%;
+  }
 }
 @media screen and (min-width: 768px) {
   .card-set__item {
@@ -557,6 +565,7 @@ address {
 }
 
 .card-set__meta {
+  flex-grow: 1;
   padding-left: 24px;
   padding-top: 20px;
   padding-right: 24px;
@@ -570,6 +579,10 @@ address {
   text-decoration: none;
   margin-top: 0;
   margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
 }
 
 .card-set__text {
@@ -633,6 +646,9 @@ address {
   height: 100vh;
   background: white;
   z-index: 2;
+  transition-property: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobmenu > .container {
   display: flex;
@@ -655,39 +671,6 @@ address {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-}
-
-.header-content__nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  color: #000000;
-  font-size: 26px;
-  line-height: 1.19;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  font-family: "Raleway";
-  color: #2196f3;
-  text-decoration: none;
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-@media screen and (max-width: 767px) {
-  .logo {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-}
-
-.logo__text--inverse {
-  color: #212121;
-}
-
-.logo__text--inversefooter {
-  color: #ffffff;
 }
 
 .menu-close {
@@ -753,85 +736,17 @@ address {
   color: #212121;
 }
 
-.menu-nav__link {
-  color: #000000;
-  text-decoration: none;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.menu-nav__link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.menu-nav__link:hover, .menu-nav__link:focus {
-  color: #2196f3;
-}
-
 .menu-contacts__link {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 0.02em;
+  text-decoration: none;
   color: #757575;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-nav__link--active {
-    position: relative;
-    color: #2196f3;
-    text-decoration: none;
-    display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .menu-nav__link--active::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: #2196f3;
-    bottom: -1px;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}
-
-.menu-nav__link--link_current {
-  color: #2196f3;
 }
 
 .menu__link--link_current {
   color: #2196f3;
-}
-
-.contacts {
-  gap: 6px;
-  padding: 0;
-}
-@media screen and (min-width: 1200px) {
-  .contacts {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .contacts {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .contacts__item:not(:last-child) {
-    margin-bottom: 6px;
-  }
-}
-
-.menu-contacts__link {
-  text-decoration: none;
 }
 
 .menu-contacts__item:not(:last-child) {
@@ -840,44 +755,6 @@ address {
 
 .menu__item:not(:last-child) {
   margin-bottom: 32px;
-}
-
-@media screen and (max-width: 767px) {
-  .contacts__icon {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .contacts__icon {
-    margin-right: 10px;
-    fill: currentColor;
-  }
-}
-
-.contacts__link {
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: #757575;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-@media screen and (min-width: 768px) {
-  .contacts__link {
-    font-size: 14px;
-    line-height: 1.14;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .contacts__link:hover, .contacts__link:focus {
-    color: #2196f3;
-  }
-}
-@media screen and (max-width: 767px) {
-  .contacts__link {
-    font-size: 24px;
-    line-height: 1.16;
-  }
 }
 
 .menu-contacts__link--active {
@@ -917,6 +794,139 @@ address {
   line-height: 22px;
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+
+.header-content__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #000000;
+  font-size: 26px;
+  line-height: 1.19;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-family: "Raleway";
+  color: #2196f3;
+  text-decoration: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+@media screen and (max-width: 767px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.logo__text--inverse {
+  color: #212121;
+}
+
+.logo__text--inversefooter {
+  color: #ffffff;
+}
+
+.menu-nav__link {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-nav__link:hover, .menu-nav__link:focus {
+  color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-nav__link--active {
+    position: relative;
+    color: #2196f3;
+    text-decoration: none;
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-nav__link--active::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2196f3;
+    bottom: -1px;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.menu-nav__link--link_current {
+  color: #2196f3;
+}
+
+.contacts {
+  gap: 6px;
+  padding: 0;
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contacts {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 6px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts__icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+.contacts__link {
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #757575;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__link {
+    font-size: 14px;
+    line-height: 1.14;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contacts__link:hover, .contacts__link:focus {
+    color: #2196f3;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contacts__link {
+    font-size: 24px;
+    line-height: 1.16;
+  }
 }
 
 .hero {
@@ -1008,10 +1018,6 @@ address {
   background: #2196f3;
 }
 
-.benefits {
-  padding-bottom: 0;
-}
-
 .benefits-list {
   margin: 0;
   padding: 0;
@@ -1034,12 +1040,11 @@ address {
 }
 
 .benefits-list__text {
-  color: #000000;
+  color: #757575;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   margin: 0;
-  margin-bottom: 30px;
 }
 
 .benefits-list__title {
@@ -1323,12 +1328,16 @@ address {
 }
 
 .team__items {
-  width: 100%;
   border-bottom: 1px solid #afb1b8;
   border-radius: 4px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  .team__items {
+    flex-basis: 100%;
+  }
 }
 @media screen and (min-width: 768px) {
   .team__items {
@@ -1367,6 +1376,10 @@ address {
   letter-spacing: 0.03em;
   text-align: center;
   margin: 0;
+}
+
+.team__image {
+  width: 100%;
 }
 
 .visually-hidden {

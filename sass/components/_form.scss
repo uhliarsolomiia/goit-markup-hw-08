@@ -151,16 +151,15 @@
   width: 16px;
   height: 15px;
   margin-right: 8px;
-  .form-check_input:focus + .form-check_label & {
+  .form-check__input:focus + .form-check__label & {
     border-color: $accent;
   }
 
-  .form-check_input:checked + .form-check_label & {
+  .form-check__input:checked + .form-check__label & {
     background-color: $accent;
     border: none;
   }
 }
-
 .form-check__link {
   color: $accent;
   margin-left: 3px;
@@ -173,5 +172,5 @@
 }
 
 .checkbox__icon {
-  fill: black;
+  fill: $background-site;
 }

@@ -246,7 +246,27 @@
           <h2 class="title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__items">
-              <img class="team__image" src="./images/img_1.jpg" alt="чоловік" width="270" />
+              <picture>
+                <source
+                  srcset="./images/img_1.jpg 1x, ./images/img_1-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/member1_tablet.jpg 1x, ./images/member1_tablet2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/member1_mobile.jpg 1x, ./images/member1_mobile2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  class="team__image"
+                  src="./images/member1_mobile.jpg"
+                  alt="чоловік"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team-members">
                 <h3 class="team-members__name">Ігор Дем'яненко</h3>
                 <p lang="en" class="team-members__position">Product Designer</p>
@@ -283,7 +303,27 @@
               </div>
             </li>
             <li class="team__items">
-              <img src="./images/img_2.jpg" alt="жінка" width="270" />
+              <picture>
+                <source
+                  srcset="./images/img_2.jpg 1x, ./images/img_2-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/member2_tablet.jpg 1x, ./images/member2_tablet2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/member2_mobile.jpg 1x, ./images/member2_mobile2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  class="team__image"
+                  src="./images/member2_mobile.jpg"
+                  alt="жінка"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team-members">
                 <h3 class="team-members__name">Ольга Репіна</h3>
                 <p lang="en" class="team-members__position">Frontend Developer</p>
@@ -320,7 +360,27 @@
               </div>
             </li>
             <li class="team__items">
-              <img src="./images/img_3.jpg" alt="чоловік" width="270" />
+              <picture>
+                <source
+                  srcset="./images/img_3.jpg 1x, ./images/img_3-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/member3_tablet.jpg 1x, ./images/member3_tablet2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/member3_mobile.jpg 1x, ./images/member3_mobile2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  class="team__image"
+                  src="./images/member3_mobile.jpg"
+                  alt="чоловік"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team-members">
                 <h3 class="team-members__name">Микола Тарасов</h3>
                 <p lang="en" class="team-members__position">Marketing</p>
@@ -357,7 +417,27 @@
               </div>
             </li>
             <li class="team__items">
-              <img src="./images/img_4.jpg" alt="чоловік" width="270" />
+              <picture>
+                <source
+                  srcset="./images/img_4.jpg 1x, ./images/img_4-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/member4_tablet.jpg 1x, ./images/member4_tablet2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/member4_mobile.jpg 1x, ./images/member4_mobile2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  class="team__image"
+                  src="./images/member4_mobile.jpg"
+                  alt="чоловік"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team-members">
                 <h3 class="team-members__name">Михайло Єрмаков</h3>
                 <p lang="en" class="team-members__position">UI Designer</p>
@@ -397,57 +477,59 @@
         </div>
       </section>
 
-      <section class="customers section container">
-        <h2 class="title">Постійні клієнти</h2>
-        <ul class="company-list">
-          <li class="company-list__item">
-            <a href="" class="company-list__logo">
-              <svg class="company-list__icon">
-                <use href="./images/icons/icons.svg#icon-Logoyaco"></use>
-              </svg>
-            </a>
-          </li>
+      <section class="customers section">
+        <div class="container">
+          <h2 class="title">Постійні клієнти</h2>
+          <ul class="company-list">
+            <li class="company-list__item">
+              <a href="" class="company-list__logo">
+                <svg class="company-list__icon">
+                  <use href="./images/icons/icons.svg#icon-Logoyaco"></use>
+                </svg>
+              </a>
+            </li>
 
-          <li class="company-list__item">
-            <a href="" class="company-list__logo">
-              <svg class="company-list__icon">
-                <use href="./images/icons/icons.svg#icon-Logotagline"></use>
-              </svg>
-            </a>
-          </li>
+            <li class="company-list__item">
+              <a href="" class="company-list__logo">
+                <svg class="company-list__icon">
+                  <use href="./images/icons/icons.svg#icon-Logotagline"></use>
+                </svg>
+              </a>
+            </li>
 
-          <li class="company-list__item">
-            <a href="" class="company-list__logo">
-              <svg class="company-list__icon">
-                <use href="./images/icons/icons.svg#icon-Logocompany"></use>
-              </svg>
-            </a>
-          </li>
+            <li class="company-list__item">
+              <a href="" class="company-list__logo">
+                <svg class="company-list__icon">
+                  <use href="./images/icons/icons.svg#icon-Logocompany"></use>
+                </svg>
+              </a>
+            </li>
 
-          <li class="company-list__item">
-            <a href="" class="company-list__logo">
-              <svg class="company-list__icon">
-                <use href="./images/icons/icons.svg#icon-Logofoster"></use>
-              </svg>
-            </a>
-          </li>
+            <li class="company-list__item">
+              <a href="" class="company-list__logo">
+                <svg class="company-list__icon">
+                  <use href="./images/icons/icons.svg#icon-Logofoster"></use>
+                </svg>
+              </a>
+            </li>
 
-          <li class="company-list__item">
-            <a href="" class="company-list__logo">
-              <svg class="company-list__icon">
-                <use href="./images/icons/icons.svg#icon-Logobrand"></use>
-              </svg>
-            </a>
-          </li>
+            <li class="company-list__item">
+              <a href="" class="company-list__logo">
+                <svg class="company-list__icon">
+                  <use href="./images/icons/icons.svg#icon-Logobrand"></use>
+                </svg>
+              </a>
+            </li>
 
-          <li class="company-list__item">
-            <a href="" class="company-list__logo">
-              <svg class="company-list__icon">
-                <use href="./images/icons/icons.svg#icon-Logo-5-1"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+            <li class="company-list__item">
+              <a href="" class="company-list__logo">
+                <svg class="company-list__icon">
+                  <use href="./images/icons/icons.svg#icon-Logo-5-1"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
