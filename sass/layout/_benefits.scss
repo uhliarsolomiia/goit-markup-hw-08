@@ -1,3 +1,8 @@
+.benefits {
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
+}
 .benefits-list {
   margin: 0;
   padding: 0;
@@ -17,17 +22,17 @@
 
 .benefits-list__text {
   color: $text-color;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-size: $headerlinkfs;
+  line-height: $benefitslh;
+  letter-spacing: $logols;
   margin: 0;
 }
 
 .benefits-list__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  font-weight: $btnfw;
+  font-size: $headerlinkfs;
+  line-height: $headerlinklh;
+  letter-spacing: $logols;
   text-transform: uppercase;
   color: $title-color;
   margin-top: 30px;

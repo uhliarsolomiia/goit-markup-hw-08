@@ -46,10 +46,10 @@
 }
 
 .modal__text {
-  font-size: 20px;
-  line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  font-size: $modalfs;
+  line-height: $modallh;
+  font-weight: $btnfw;
+  letter-spacing: $logols;
   margin-top: 0;
 
   color: $title-color;

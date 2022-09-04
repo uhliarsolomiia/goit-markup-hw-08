@@ -43,9 +43,9 @@
 
 .form-group__label {
   width: 100%;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
+  font-size: $formfs;
+  font-weight: $animationfw;
+  letter-spacing: $formls;
   margin-bottom: 10px;
   color: $title-color;
   text-align: start;
@@ -69,10 +69,10 @@
   resize: none;
   outline: none;
   color: rgba(117, 117, 117, 0.5);
-  font-size: 14px;
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: 0.01em;
+  font-size: $headerlinkfs;
+  line-height: $formtextlh;
+  font-weight: $animationfw;
+  letter-spacing: $formls;
   &:focus {
     border-color: $accent;
   }
@@ -93,10 +93,10 @@
 }
 
 .form-area__label {
-  font-size: 12px;
-  line-height: 1.16;
-  font-weight: 400;
-  letter-spacing: 0.01em;
+  font-size: $formfs;
+  line-height: $formlh;
+  font-weight: $headerlinkfw;
+  letter-spacing: $formls;
   color: $title-color;
 }
 
@@ -109,10 +109,10 @@
   background: $accent;
   border: $adress-color;
   border-radius: 4px;
-  font-size: 16px;
-  line-height: 1.87;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: $btnfs;
+  line-height: $btnlh;
+  font-weight: $btnfw;
+  letter-spacing: $herols;
   text-align: center;
   color: $background-site;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -124,8 +124,8 @@
 .form-check__label {
   @extend %aling-list;
   justify-content: center;
-  font-weight: 400;
-  letter-spacing: 0.03em;
+  font-weight: $animationfw;
+  letter-spacing: $logols;
   color: $title-color;
   margin-top: 20px;
 
@@ -134,12 +134,12 @@
     line-height: 1;
   }
   @media screen and (min-width: 480px) {
-    font-size: 12px;
-    line-height: 1.16;
+    font-size: $formfs;
+    line-height: $formlh;
   }
   @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: $headerlinkfs;
+    line-height: $formchecklh;
   }
 }
 

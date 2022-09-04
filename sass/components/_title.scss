@@ -1,9 +1,9 @@
 .title {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 33px;
+  font-weight: $btnfw;
+  font-size: $titlefs;
+  line-height: $formchecklh;
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: $logols;
   color: $title-color;
   padding-bottom: 30px;
   margin: 0;
