@@ -51,6 +51,9 @@
   font-weight: $btnfw;
   letter-spacing: $logols;
   margin-top: 0;
-
   color: $title-color;
+  @media screen and (max-width: 479px) {
+    font-size: 12px;
+    line-height: 1;
+  }
 }

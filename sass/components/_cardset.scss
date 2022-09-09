@@ -27,10 +27,10 @@
   margin-top: 40px;
 
   @media screen and (min-width: 768px) {
-    margin-top: 14px;
+    margin-top: 32px;
   }
   @media screen and (min-width: 1200px) {
-    margin-top: 32px;
+    margin-top: 50px;
   }
 }
 
@@ -74,4 +74,9 @@
   color: $text-color;
   text-decoration: none;
   margin: 0;
+}
+.card-set__image {
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
 }

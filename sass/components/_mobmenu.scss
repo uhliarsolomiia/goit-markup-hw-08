@@ -35,8 +35,8 @@
 .menu-close {
   border: none;
   background: transparent;
-  display: block;
-  margin-left: auto;
+  position: absolute;
+  left: 80%;
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -54,12 +54,21 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
+  &:hover,
+  &:focus {
+    fill: $accent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .menu {
   padding-left: 40px;
   gap: 50px;
   margin: 0;
+  margin-top: 20px;
+  @media screen and (max-width: 479px) {
+    padding-left: 20px;
+  }
 }
 .menu__link {
   text-decoration: none;
@@ -68,8 +77,15 @@
   line-height: $mobmenulh;
   letter-spacing: $headerlinkls;
   color: $title-color;
+  @media screen and (max-width: 479px) {
+    font-size: 30px;
+  }
 }
-
+.menu-contacts__list {
+  @media screen and (max-width: 479px) {
+    padding-left: 20px;
+  }
+}
 .menu-contacts__link {
   font-weight: $headerlinkfw;
   font-size: $mobmenucontactsfs;
@@ -77,6 +93,9 @@
   letter-spacing: $headerlinkls;
   text-decoration: none;
   color: $text-color;
+  @media screen and (max-width: 479px) {
+    font-size: 14px;
+  }
 }
 .menu__link--link_current {
   color: $accent;
@@ -85,10 +104,20 @@
   &:not(:last-child) {
     margin-bottom: 32px;
   }
+  @media screen and (max-width: 479px) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
 }
 .menu__item {
   &:not(:last-child) {
     margin-bottom: 32px;
+  }
+  @media screen and (max-width: 479px) {
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
   }
 }
 .menu-contacts__link--active {
@@ -97,6 +126,9 @@
   line-height: $mobmenulinkactivelh;
   letter-spacing: $headerlinkls;
   color: $accent;
+  @media screen and (max-width: 479px) {
+    font-size: 26px;
+  }
 }
 .menu-networks {
   display: flex;
@@ -107,6 +139,10 @@
   margin-top: 64px;
   @media screen and (min-width: 767px) {
     display: none;
+  }
+  @media screen and (max-width: 479px) {
+    margin-top: 44px;
+    padding-left: 20px;
   }
 }
 
@@ -125,4 +161,7 @@
   line-height: $mobmenunetworkslh;
   letter-spacing: $headerlinkls;
   color: $accent;
+  @media screen and (max-width: 479px) {
+    font-size: 10px;
+  }
 }

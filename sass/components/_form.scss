@@ -28,7 +28,7 @@
   }
   @media screen and (max-width: 479px) {
     width: 100%;
-    height: 40px;
+    height: 30px;
   }
   @media screen and (min-width: 480px) {
     width: 370px;
@@ -49,6 +49,10 @@
   margin-bottom: 10px;
   color: $title-color;
   text-align: start;
+  @media screen and (max-width: 479px) {
+    font-size: 10px;
+    line-height: 1;
+  }
 }
 
 .form-area {
@@ -78,9 +82,11 @@
   }
   &::placeholder {
     color: rgba(117, 117, 117, 0.5);
+    font-style: 10px;
   }
   @media screen and (max-width: 479px) {
     width: 100%;
+    height: 100px;
   }
   @media screen and (min-width: 480px) {
     width: 370px;
@@ -98,6 +104,10 @@
   font-weight: $headerlinkfw;
   letter-spacing: $formls;
   color: $title-color;
+  @media screen and (max-width: 479px) {
+    font-size: 10px;
+    line-height: 1;
+  }
 }
 
 .form-check__btn {
@@ -124,18 +134,17 @@
 .form-check__label {
   @extend %aling-list;
   justify-content: center;
+  font-size: 12px;
   font-weight: $animationfw;
   letter-spacing: $logols;
   color: $title-color;
   margin-top: 20px;
 
   @media screen and (max-width: 479px) {
-    font-size: 6px;
+    font-size: 8px;
     line-height: 1;
-  }
-  @media screen and (min-width: 480px) {
-    font-size: $formfs;
-    line-height: $formlh;
+    margin-top: 10px;
+    flex-wrap: wrap;
   }
   @media screen and (min-width: 1200px) {
     font-size: $headerlinkfs;
@@ -159,7 +168,12 @@
     background-color: $accent;
     border: none;
   }
+  @media screen and (max-width: 479px) {
+    width: 12px;
+    height: 11px;
+  }
 }
+
 .form-check__link {
   color: $accent;
   margin-left: 3px;
@@ -169,6 +183,10 @@
   fill: transparent;
   width: 11px;
   height: 18px;
+  @media screen and (max-width: 479px) {
+    width: 10px;
+    height: 17px;
+  }
 }
 
 .checkbox__icon {
