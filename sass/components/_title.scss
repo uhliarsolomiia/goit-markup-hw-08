@@ -1,10 +1,18 @@
 .title {
   font-weight: $btnfw;
-  font-size: $titlefs;
-  line-height: $formchecklh;
-  text-align: center;
   letter-spacing: $logols;
+  text-align: center;
   color: $title-color;
-  padding-bottom: 30px;
+  @media screen and (min-width: 480px) {
+    padding-bottom: 30px;
+    font-size: $titlemobilefs;
+    line-height: $mobmenulh;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 50px;
+    font-size: $titlefs;
+    line-height: $formlh;
+  }
+
   margin: 0;
 }
