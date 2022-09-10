@@ -47,7 +47,6 @@ address {
 }
 
 .container {
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
@@ -167,7 +166,6 @@ address {
 }
 
 .container {
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
@@ -658,10 +656,14 @@ address {
 
 .filter-list {
   display: flex;
+  padding-left: 0;
   flex-wrap: wrap;
-  gap: 8px;
-  padding-left: auto;
-  margin: 0;
+  column-gap: 8px;
+}
+@media screen and (max-width: 767px) {
+  .filter-list {
+    row-gap: 15px;
+  }
 }
 @media screen and (min-width: 768px) {
   .filter-list {
@@ -688,6 +690,12 @@ address {
   padding-right: 22px;
   padding-bottom: 6px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 767px) {
+  .filter-list__btn {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 .filter-list__btn:hover, .filter-list__btn:focus {
   background-color: #2196f3;
